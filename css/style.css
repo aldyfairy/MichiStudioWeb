@@ -1,0 +1,576 @@
+* {
+  margin: 0;
+  padding: 0;  
+  box-sizing: border-box;
+}
+
+/*Index*----------------------- */
+header {
+  display: flex;
+  justify-content: space-between; /* logo+titulo a la izquierda, nav a la derecha */
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: #ffeef6; 
+  border-bottom: 2px solid #ffd6e8;
+}
+
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; 
+}
+
+a {  
+  text-decoration: none;
+  color: inherit;
+}
+
+.logo {
+  width: 120px;
+  height: auto;
+  border-radius: 50%; 
+  object-fit: cover;
+}
+
+header h1 {
+  font-family: "Schoolbell", cursive;
+  font-size: 3rem;
+  color: #ff69b4; /* rosa fuerte para destacar */
+  margin: 0;
+}
+
+/* Navegación */
+nav ul {
+  font-family: "Schoolbell", cursive;
+  font-size: 1.5rem;
+  list-style: none; 
+  display: flex;
+  gap: 1.5rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #ff69b4;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #d63384;
+}
+
+
+.novedades  {
+  font-family: "Schoolbell", cursive;
+  padding: 2rem;
+  background-color: #fff3ed;
+  padding: .5rem;
+  text-align: center;
+  padding: 1.5rem 2rem 2rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* ACERCA DE */
+.acerca-main , .lista-carrito, .resumen-compra  {
+  font-family: "Schoolbell", cursive;
+  padding: 1rem;
+  background-color: #fff3ed;
+  display: grid;  
+  text-align:center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(100px, .5fr));
+  gap: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/*Carrito de compras*/
+.producto-carrito {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  align-items: center;
+  background-color: #ffe5f0;
+  border-radius: 10px;
+  padding: 1rem;
+  transition: transform 0.2s ease;
+  
+}
+
+.producto-carrito:hover {
+  transform: scale(1.02);
+}
+
+.comentario-contacto {
+  font-family: "Schoolbell", cursive;
+  padding: 1rem;
+  background-color: #fff3ed;
+  display: flex;  
+  text-align:center;
+  justify-content: center;
+  flex: 1;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  color: #ff69b4;
+  
+}
+.comentario-contacto a{
+  font-weight: bold;
+  transition: color 0.3s;
+  margin: 0 4px;
+}
+
+
+.comentario-contacto a:hover {  
+  color: #d63384;
+}
+
+
+.Fabricacion , .main-faqpoliticas {
+  font-family: "Schoolbell", cursive;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(auto-fit, minmax(100px, .5fr));
+  text-align: center;
+  background-color: #ffeef6;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  padding: 20px;
+}
+
+.Kunta, .Nosotros , .Briimiiau {
+  background-color: #fedac7;
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.faq , .politicas {
+  display: grid;
+  justify-content: center;
+  padding: 20px;
+}
+
+.faq article , .politicas article {
+  display: grid;
+  padding: 20px;
+}
+
+.Nosotros img , .Kunta img , .Briimiiau img {
+  width: 220px;
+  border-radius: 10px;
+}
+
+.novedades h2, .Nosotros h2 , .Kunta h2 ,
+ .Briimiiau h2, .titulo-productos , .faq h2 ,
+ .politicas h2, .titulo-carrito, .Finalizar-Compra {
+  font-family: "Schoolbell", cursive;
+  font-size: 1.8rem;
+  margin-bottom: 1rem; /* separa el título del grid */
+  color: #ff69b4;
+  padding: 10px;
+}
+
+.productos-grid  {
+  display: grid;
+  grid-auto-flow: column; /* pone los items en fila */
+  grid-auto-columns: 350px; /* ancho fijo de cada producto */
+  overflow-x: auto;
+  gap: 1rem;
+  
+}
+
+.productos-grid-principal, .main-servicios   {
+  font-family: "Schoolbell", cursive;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px;
+  gap: 1rem;
+  
+}
+
+.producto , .servicio  {
+  flex: 0 50px 50px; /* ancho fijo de cada producto */
+  background-color: #ffeef6;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.producto img, .servicio img {
+  width: 100%;      /* la imagen ocupa todo el ancho del contenedor */
+  height: 150px;    /* alto fijo, podés ajustar según tu diseño */
+  object-fit: cover; /* recorta y mantiene proporción */
+  border-radius: 10px;
+}
+
+
+.extras {
+  display: flex;
+  gap: 2rem;                      /* espacio entre video y newsletter */
+  padding: 2rem;
+  font-family: "Schoolbell", cursive;
+}
+
+.video {
+  font-family: "Schoolbell", cursive;  
+  text-align:center;
+  flex-shrink: 0;
+  background-color: #fff3ed;
+  padding: 1.5rem 2rem 2rem 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.newsletter {
+  display: flex;
+  align-items:center ;   
+  width: 100%;                  /* ocupa todo el ancho de la pantalla */
+  background-color: #ffb1d6;
+  font-family: "Schoolbell", cursive;
+  font-size: 20px;
+  padding: 1.5rem;              /* padding uniforme, evita extra a la derecha */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+.buscador-filtros {
+  display: flex;
+  justify-content: space-around;
+  align-items:center ;   
+  width: 100%;                  /* ocupa todo el ancho de la pantalla */
+  background-color: #ffb1d6;
+  font-weight: bold;
+  font-family: "Schoolbell", cursive;
+  font-size: 20px;
+  padding: 1.5rem;              /* padding uniforme, evita extra a la derecha */
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  flex: 1;
+}
+
+ .contacto, .Form-Finalizar-Compra {
+  display: grid;
+  background-color: #ffb1d6;
+  font-weight: bold;
+  font-family: "Schoolbell", cursive;
+  font-size: 20px;
+  padding: 1.5rem; 
+  border-radius: 10px;   
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+  grid-template-columns: repeat(auto-fit, minmax(2250px, 1fr));  
+  gap: 20px;
+  width: 100%;
+}
+
+.contacto textarea {
+  display: flex;
+  flex-direction: column;   /* coloca label arriba del textarea */
+  align-items: center;      /* centra horizontalmente */
+  gap: 0.5rem;              /* espacio entre label y textarea */
+}
+
+.contacto label {
+  font-family: "Schoolbell", cursive;
+  font-size: 18px;
+  text-align: center;   
+}
+
+.buscador-filtros input[type="text"],
+.buscador-filtros input[type="number"],
+.buscador-filtros select,
+.contacto input[type="text"],
+.contacto input[type="email"],
+.contacto textarea,
+.Form-Finalizar-Compra input[type="text"],
+.Form-Finalizar-Compra input[type="email"],
+.Form-Finalizar-Compra select {
+  width: 25%;               /* ocupa todo el ancho del contenedor */
+  padding: 0.1rem 1rem;      /* espacio interno */
+  border: 2px solid #ffb1d6; /* color del borde */
+  border-radius: 10px;       /* bordes redondeados */
+  background-color: #fff;    /* fondo blanco */
+  font-family: "Schoolbell", cursive;
+  font-size: 18px;
+  color: #444;
+  outline: none;             /* quita el borde azul al hacer clic */
+  transition: all 0.3s ease; /* animación suave */
+}
+
+button {
+  background-color: #ff7bbf;
+  color: white;
+  border: none;
+  padding: 0.3rem 1.2rem;
+  border-radius: 10px;
+  font-family: "Schoolbell", cursive;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff9ccc;
+  transform: scale(1.05);
+}
+
+/*a estilizado como btn en carrito de compras*/
+.btn-finalizar-compra {
+  display: inline-block;
+  background-color: #ff82bf;
+  color: white;
+  padding: 0.8rem 2rem;
+  border-radius: 10px;
+  text-decoration: none;
+  font-family: "Schoolbell", cursive;
+  font-size: 18px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.btn-finalizar-compra:hover {
+  background-color: #ffb1d6;
+}
+
+
+
+.contacto-main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 20px;
+  gap: 1rem;
+}
+
+
+
+.gato-newsletter {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 8px;
+  animation: levitar 3s ease-in-out infinite;
+}
+
+
+@keyframes levitar {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-15px); } /* sube */
+  100% { transform: translateY(0); }     /* vuelve abajo */
+}
+
+
+/* Bloque derecho: título arriba, formulario abajo, texto alineado a la derecha */
+.titulo-newsletter  {
+  display: flex;
+  flex-direction: column;   /* título arriba, formulario abajo */
+  justify-content: flex-end;  /* alinea arriba del bloque */
+  text-align: right;         /* texto al costado, no centrado */
+  color: #ffffff;
+  flex: 1;     
+}
+
+.grid-newsletter  {
+  display: grid;
+  grid-auto-flow: row;
+  grid-auto-rows: 50px; 
+  gap: 0.5rem;
+  flex: 1;
+  text-align: right;
+}
+
+.newsletter input[type="text"],
+.newsletter input[type="email"] {
+  width: 25%;               /* ocupa todo el ancho del contenedor */
+  padding: 0.1rem 1rem;      /* espacio interno */
+  border: 2px solid #ffb1d6; /* color del borde */
+  border-radius: 10px;       /* bordes redondeados */
+  background-color: #fff;    /* fondo blanco */
+  font-family: "Schoolbell", cursive;
+  font-size: 18px;
+  color: #444;
+  outline: none;             /* quita el borde azul al hacer clic */
+  transition: all 0.3s ease; /* animación suave */
+}
+
+ .fa-brands {
+  font-size: 55px;
+  color: #d63384;
+ }
+
+
+
+
+.redes {
+  display: flex;
+  flex: 1;
+  justify-content: space-around;
+}
+
+
+.derecha {
+  flex: 1;
+  display: flex;
+  flex-direction: column; 
+  
+  gap: 0.5rem;
+}
+
+.icono-tip {
+  font-size: 50px;         /* tamaño del emoji */
+  line-height: 0;            /* reduce espacio extra */
+}
+
+.tips-productos {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+gap: 1rem;
+}
+
+.tip {
+  background-color: #ffeef6;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+
+  display: flex;             /* activa Flexbox */
+  justify-content: center;   /* centra horizontalmente */
+  align-items: center;       /* centra verticalmente */
+  text-align: center;        /* centra el texto si es multilinea */
+
+  font-size: 1rem;
+  line-height: 1.2;
+
+}
+
+
+
+
+
+footer{
+  display: flex;
+  background-color: #ffb1d6; 
+  border-top:2px solid #d63384;
+  font-family: "Schoolbell", cursive;
+  justify-content: space-around; /* reparte el espacio entre los párrafos */
+  align-items: center;        /* centra verticalmente */
+  padding: 1rem;
+}
+
+.banner-descuento {
+  background-color: #fcaec8; /* rosita pastel */
+  color: #d63384; /* rosa fuerte */
+  font-weight: bold;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+  font-family: "Schoolbell", cursive;
+  width: 100%;   
+  height: 40px;        /* más alto */
+  line-height: 40px;        
+}
+
+.banner-descuento p {
+  display: inline-block;
+  white-space: nowrap;
+  position: relative;
+  animation: moverBanner 10s linear infinite; /* 10s, movimiento lineal y repetición infinita */
+}
+
+@keyframes moverBanner {
+  0% {
+    left: 0; /* empieza fuera a la derecha */
+  }
+  100% {
+    left: -50%; /* termina fuera a la izquierda */
+  }
+}
+
+
+/*Media queries*----------------------- */
+
+@media only screen and (max-width: 600px) {
+    body {
+    font-size: 16px;
+    padding: 0.5rem;
+  }
+
+  header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+ 
+  .grid,
+  .productos,
+  .tips {
+    grid-template-columns: 1fr;  
+    width: 100%;
+  }
+
+  article img {
+    width: 100%;
+    height: auto;
+  }
+
+  
+  .newsletter img {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  button,
+  .btn {
+    width: 100%;
+    font-size: 18px;
+  }
+
+  .carrito {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  
+  .tips-productos, .extras, .newsletter, .grid-newsletter, .newsletter input[type="text"],
+  .newsletter input[type="email"], .acerca-main, .Fabricacion, .buscador-filtros, .buscador-filtros input[type="text"],
+  .buscador-filtros input[type="number"],.buscador-filtros select, .contacto, .contacto input[type="text"], .contacto input[type="email"],
+  .contacto label, .main-faqpoliticas, .lista-carrito, .Form-Finalizar-Compra, .Form-Finalizar-Compra input[type="text"],
+  .Form-Finalizar-Compra input[type="email"], .Form-Finalizar-Compra select
+  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+    justify-content: center;
+    gap: 1rem;     
+    width: auto;
+  }
+
+
+
+  .tip {
+    width: 90%;             /* los hace más angostos para que no ocupen todo */
+    text-align: center;     /* centra el texto dentro */
+  }
+
+    .comentario-contacto {
+    display: inline-block;
+  }
+
+
+  .video iframe,
+  .video video {
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    border-radius: 10px;
+  }
+}
+

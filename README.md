@@ -1,2 +1,2 @@
-# MichiStudioWeb
-Es la web que cree para el curso de FrontEnd JS 2025.
+Esta es una pagina PLACEHOLDER de lo que sería un emprendimiento de tienda online de productos y servicios de arte y diseño en orientación a los gatos. Todos los productos y servicios son ficticios y las imagenes utilizadas son solo para tener una idea básica de lo que se planea emprender. 
+Utiliza los principios basicos de HTML y CSS. 
